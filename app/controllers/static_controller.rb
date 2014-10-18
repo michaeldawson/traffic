@@ -4,6 +4,6 @@ class StaticController < ApplicationController
   end
 
   def tweets
-    @twitter_entries = TwitterEntry.all
+    @twitter_entries = Issue.all
   end
 end

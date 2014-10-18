@@ -16,6 +16,7 @@ gem 'twitter'
 gem 'geocoder'
 
 group :test do
-  gem 'rspec-rails'
-  gem 'byebug'
+  gem 'rspec-rails'  
 end
+
+gem 'byebug', group: [:development, :test]

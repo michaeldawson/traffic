@@ -14,12 +14,13 @@ class TweetService
 
     return if !(/-/.match text)
     return if rt.match text
-    return if TwitterEntry.where(uid: id).first
+    return if Issue.where(uid: id).first
 
     suburb = text.split("-").first.strip
     description = (text.split("-").last.strip).gsub(handle, "").gsub(hashtag, "")
-    roads = text.scan(road)
-    
-    TwitterEntry.create(uid: id, original_text: text, suburb: suburb, description: description)
+    streets = text.scan(road).map{|s| s.join(" ")}.join(", ")
+    # streets_atributes = 
+    issue = Issue.create(uid: id, original_text: text, suburb: suburb, description: description, streets: streets)
+
   end
 end
