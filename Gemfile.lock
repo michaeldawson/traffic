@@ -69,6 +69,8 @@ GEM
       curb (~> 0.8)
       loofah (~> 2.0)
       sax-machine (~> 1.0)
+    font-awesome-rails (4.2.0.0)
+      railties (>= 3.2, < 5.0)
     geocoder (1.2.4)
     hashie (3.3.1)
     hike (1.2.3)
@@ -202,6 +204,7 @@ DEPENDENCIES
   devise
   factory_girl_rails (>= 4.2.0)
   feedjira
+  font-awesome-rails
   geocoder
   jquery-rails
   nokogiri
