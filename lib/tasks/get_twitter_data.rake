@@ -9,8 +9,7 @@ task :get_twitter_data => :environment do
   end
 
   tweets = twitter_client.user_timeline("NickGreenATN")
-
   tweets.each do |tweet|
-    (TweetService.new(tweet.id, tweet.full_text)).process
+    (TweetService.new(tweet.id, tweet.full_text, tweet.created_at)).process
   end
 end

@@ -6,10 +6,6 @@ task :get_council_data => :environment do
   feed = feeds.first
 
   feed[1].entries.each do |entry|
-    new_entry = Entry.find_or_initialize_by(uid: entry.id)
-    new_entry.title = entry.title
-    new_entry.summary = entry.summary
-
-    new_entry.save
+    (CouncilService.new(entry.id, entry.title, entry.summary, entry.published)).process
   end
 end

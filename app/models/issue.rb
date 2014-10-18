@@ -10,6 +10,6 @@ class Issue < ActiveRecord::Base
     # this example DOES NOT ignore the user's options
     # super({:only => [:email, :handle]}.merge(options))
 
-    {lat: latitude, lng: longitude, description: description.humanize}
+    {lat: latitude, lng: longitude, description: description.humanize, issue_date: issue_date.strftime("%d %b")}
   end
 end

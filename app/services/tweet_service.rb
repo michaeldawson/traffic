@@ -1,8 +1,9 @@
 class TweetService
-  attr_accessor :id, :text
-  def initialize id, text
+  attr_accessor :id, :text, :issue_date
+  def initialize id, text, issue_date
     self.id = id
     self.text = text
+    self.issue_date = issue_date
   end
 
   def process
@@ -19,8 +20,15 @@ class TweetService
     suburb = text.split("-").first.strip
     description = (text.split("-").last.strip).gsub(handle, "").gsub(hashtag, "")
     streets = text.scan(road).map{|s| s.join(" ")}.join(", ")
-    # streets_atributes = 
-    issue = Issue.create(uid: id, original_text: text, suburb: suburb, description: description, streets: streets)
-
+    
+    issue = Issue.create(
+      uid: id, 
+      source: "twitter",
+      original_text: text, 
+      suburb: suburb, 
+      description: description, 
+      streets: streets, 
+      issue_date: issue_date
+    )
   end
 end

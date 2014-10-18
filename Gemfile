@@ -15,6 +15,8 @@ gem 'twitter'
 # Geocoding
 gem 'geocoder'
 
+gem 'nokogiri'
+
 gem 'active_model_serializers'
 
 group :test do

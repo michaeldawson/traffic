@@ -16,11 +16,13 @@ ActiveRecord::Schema.define(version: 20141018113951) do
   create_table "issues", force: true do |t|
     t.string   "uid"
     t.string   "original_text"
+    t.string   "source"
     t.string   "suburb"
     t.float    "latitude"
     t.float    "longitude"
     t.text     "description"
     t.string   "streets"
+    t.datetime "issue_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
