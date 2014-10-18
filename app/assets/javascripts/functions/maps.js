@@ -4,7 +4,6 @@ var Maps = function() {
   return {
     init: function() {
       // Set default height to all Google Maps Containers
-
       $('.gmap').css('height', $(window).height() + 'px');
 
       // Initialize map with markers
@@ -38,7 +37,7 @@ var Maps = function() {
         strokeOpacity: 0.9,
         strokeWeight: 8
       });
-      return res
+      return res;
     },
 
     cleanRoute: function() {

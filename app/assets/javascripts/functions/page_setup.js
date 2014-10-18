@@ -48,8 +48,10 @@ function pageSetup() {
         return false;
     });  
 
+    $('.input-timepicker').timepicker({minuteStep: 1,showSeconds: true,showMeridian: true});
+
     if (app.el['window'].width() > 1024){
-    
+
     $('.animated').appear(function() {
       var element = $(this);
       var animation = element.data('animation');

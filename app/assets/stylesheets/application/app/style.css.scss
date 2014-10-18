@@ -924,7 +924,7 @@ padding: 90px 0px 80px; }
 
 
 .maps-sidebar {
-  padding-top: 125px;
+  padding-top: 25px;
   padding-left: 45px;
   color: #fff;
 
@@ -939,6 +939,10 @@ padding: 90px 0px 80px; }
 .route-params {
   margin-bottom: 5px;
   width: 100%;
+}
+
+.bootstrap-timepicker-widget tr:nth-child(2) {
+    display: none;
 }
 
 #unsub {
