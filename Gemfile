@@ -15,6 +15,8 @@ gem 'twitter'
 # Geocoding
 gem 'geocoder'
 
+gem 'active_model_serializers'
+
 group :test do
   gem 'rspec-rails'
 end
