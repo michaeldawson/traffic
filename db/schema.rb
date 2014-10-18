@@ -11,12 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018095115) do
+ActiveRecord::Schema.define(version: 20141018103431) do
 
-  create_table "entries", force: true do |t|
+  create_table "councilentries", force: true do |t|
     t.string   "uid"
     t.string   "title"
     t.text     "summary"
+    t.string   "suburb"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "twitter_entries", force: true do |t|
+    t.string   "uid"
+    t.string   "original_text"
+    t.string   "suburb"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -8,6 +8,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 
-
 gem 'feedjira'
 gem 'twitter'
+
+group :test do
+  gem 'rspec-rails'
+  gem 'byebug'
+end
