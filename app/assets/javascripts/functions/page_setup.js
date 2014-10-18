@@ -15,7 +15,12 @@ function pageSetup() {
     else size = "Desktop";
     // $('#screen').html( size + ' - ' + width );
     // console.log( size, width );
-    };  
+    };
+
+    var resizePageContent = function() {
+    var windowH         = $(window).height();
+        $('#hero').css('min-height', windowH + 'px');
+    }();
   
     //Preloader
     app.el['loader'].delay(700).fadeOut();
