@@ -11,6 +11,6 @@ task :get_twitter_data => :environment do
   tweets = twitter_client.user_timeline("NickGreenATN")
 
   tweets.each do |tweet|
-    TweetService.new tweet.id, tweet.full_text
+    (TweetService.new(tweet.id, tweet.full_text)).process
   end
 end

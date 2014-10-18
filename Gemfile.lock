@@ -55,6 +55,7 @@ GEM
       curb (~> 0.8)
       loofah (~> 2.0)
       sax-machine (~> 1.0)
+    geocoder (1.2.4)
     hike (1.2.3)
     http (0.6.2)
       http_parser.rb (~> 0.6.0)
@@ -160,6 +161,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   feedjira
+  geocoder
   jquery-rails
   rails (= 4.1.6)
   rspec-rails

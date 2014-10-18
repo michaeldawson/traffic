@@ -22,7 +22,22 @@ describe TweetService do
     end
 
     context "that's not a retweet" do
-      context "that has street names in it" do
+      context "without a suburb" do
+        before :each do
+          @text = "Main North Rd near Regency Rd SB pretty slow #Adelaide"
+          @tweet_service = TweetService.new(@uid, @text)
+        end
+
+        it "doesn't create a new twitter entry" do
+          expect {
+            @tweet_service.process
+          }.to_not change {
+            TwitterEntry.count
+          }
+        end
+      end
+
+      context "that has a suburb and street names in it" do
         before :each do
           @text = "Enfield - Main North Rd near Regency Rd SB pretty slow #Adelaide"
           @tweet_service = TweetService.new(@uid, @text)

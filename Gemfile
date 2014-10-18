@@ -8,8 +8,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 
+# Inputs
 gem 'feedjira'
 gem 'twitter'
+
+# Geocoding
+gem 'geocoder'
 
 group :test do
   gem 'rspec-rails'

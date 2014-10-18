@@ -9,12 +9,15 @@ class TweetService
     # Takes a tweet id and text, checks if it exists, looks to see if it's alerting us of traffic issues, then saves it if that's the case
     rt = /RT/
     road = /(\S+)\s(Rd|rd|Street|street|St|st|Lane|lane|Drive|drive|Dr|dr|Avenue|avenue|Av|av|Ave|Tce|tce)/
+    handle = /@(\S+)/
+    hashtag = /#(\S+)/
 
+    return if !(/-/.match text)
     return if rt.match text
-    return if TwitterEntry.where(id: id).first
+    return if TwitterEntry.where(uid: id).first
 
     suburb = text.split("-").first.strip
-    description = text.split("-").last.strip
+    description = (text.split("-").last.strip).gsub(handle, "").gsub(hashtag, "")
     roads = text.scan(road)
     
     TwitterEntry.create(uid: id, original_text: text, suburb: suburb, description: description)
