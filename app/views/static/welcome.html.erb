@@ -1,6 +1,19 @@
 <div class="row">
-  <div class="col-sm-3 back-gray">
+  <div class="col-sm-3 maps-sidebar">
   <h3>Enter your route</h3>
+  <p>Add in your daily travel routes, and we'll message you when we learn about traffic obstructions along your way.</p>
+
+  <input id="route-from" placeholder="From" class="form-control route-params">
+  <input id="route-to" placeholder="To" class="form-control route-params">
+
+  <input id="route-starttime" placeholder="Between" class="form-control route-params">
+  <input id="route-endtime" placeholder="...And" class="form-control route-params">
+
+  <button class="btn btn-primary btn-sm" id="route-add">Add!</button>
+  <button class="btn btn-default pull-right btn-sm" id="route-rm">Clear</button>
+
+  <a href="#" class="pull-right" id="unsub">Unsubscribe</a>  
+
   </div>
   <div class="col-sm-9">
     <div id="gmap-issues" class="gmap"></div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018145122) do
+ActiveRecord::Schema.define(version: 20141018170717) do
 
   create_table "issues", force: true do |t|
     t.string   "uid"
@@ -34,6 +34,27 @@ ActiveRecord::Schema.define(version: 20141018145122) do
 
   add_index "issues_streets", ["issue_id", "street_id"], name: "index_issues_streets_on_issue_id_and_street_id"
   add_index "issues_streets", ["street_id"], name: "index_issues_streets_on_street_id"
+
+  create_table "notifications", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "issue_id"
+    t.text     "text"
+    t.string   "ad"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "notifications", ["issue_id"], name: "index_notifications_on_issue_id"
+  add_index "notifications", ["user_id"], name: "index_notifications_on_user_id"
+
+  create_table "routes", force: true do |t|
+    t.string   "route_from"
+    t.string   "route_to"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "streets", force: true do |t|
     t.string   "name"

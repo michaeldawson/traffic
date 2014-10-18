@@ -9,9 +9,8 @@
   
 </head>
 <body data-action="<%= action_name %>" data-controller="<%= nice_controller_name %>" >
-
   <%= render 'layouts/preloader' %>    
-  <%= render 'layouts/header' %>
+  <%= render 'layouts/header' if controller_name == 'static' && action_name == 'index' %>
   
   <%= yield %>
 

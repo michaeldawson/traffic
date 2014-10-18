@@ -39,6 +39,10 @@ var Maps = function() {
         strokeWeight: 8
       });
       return res
+    },
+
+    cleanRoute: function() {
+      map.cleanRoute();
     }
   };
 }();
