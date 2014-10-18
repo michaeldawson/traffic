@@ -6,6 +6,7 @@ class AddPropsToUsers < ActiveRecord::Migration
     add_column :users, :location, :string
     add_column :users, :address_state, :string
     add_column :users, :gender, :string
+    add_column :users, :mobile, :string
     add_column :users, :provider, :string
     add_column :users, :uid, :string
     add_column :users, :state, :string

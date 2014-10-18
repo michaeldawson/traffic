@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20141018145122) do
     t.string   "location"
     t.string   "address_state"
     t.string   "gender"
+    t.string   "mobile"
     t.string   "provider"
     t.string   "uid"
     t.string   "state"

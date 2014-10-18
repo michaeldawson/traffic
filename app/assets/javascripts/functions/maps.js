@@ -7,7 +7,7 @@ var Maps = function() {
       // Initialize map with markers
       var gmapIssues = new GMaps({
         div: '#gmap-issues',
-        lat: -34.85,
+        lat: -34.9,
         lng: 138.6,
         zoom: 10,
         scrollwheel: false

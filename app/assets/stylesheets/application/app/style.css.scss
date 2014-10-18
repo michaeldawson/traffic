@@ -86,7 +86,7 @@ article { text-align: left; }
 .navigation-brand { float: left; }
 .navigation-brand:after { content: ''; display: table; }
 .navigation-brand .brand-logo  { width:215px; height:50px; }
-.navigation-brand .brand-logo .logo { display:block; height: 30px; background:image-url('img/logo_header.png') center center no-repeat; }
+/*.navigation-brand .brand-logo .logo { display:block; height: 30px; background:image-url('adelaide-city-white.png') center center no-repeat; }*/
 .fixmenu-clone .brand-logo .logo { background:image-url('img/logo-inverted.png') center center no-repeat; }
 .navigation-brand .brand-logo h4 { margin-top:15px; }
 .navigation-brand .brand-logo  a { color:#fff; }
@@ -254,16 +254,16 @@ blockquote:after { font-family: "line-icons";  position: absolute; color: #ef413
 #register-page .text-heading { padding-top: 125px; }
 
 /* Header versions */
-.plain-version .text-heading { padding-top: 15%; }
+.plain-version .text-heading { padding-top: 17%; }
 .register-version.static-header { background: image-url('img/background/traffic.jpg') top center no-repeat; -webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-attachment: fixed; position: relative; }
-.register-version .text-heading { padding-top: 20%; }
+.register-version .text-heading { padding-top: 15%; }
 .video-version .text-heading { padding-top: 12%; }
 .form-version {}
 .register-version#hero .btn-primary, .register-version .submit-wrap { width:auto; }
 .register-version .signup-wrapper { text-align:center; width:auto; }
 
-#color-landing-page .navigation-brand .brand-logo .logo { display:block; height: 30px; background:image-url('img/logo-white.png') center center no-repeat; }
-#color-landing-page .fixmenu-stick .navigation-brand .brand-logo .logo { background:image-url('img/logo-inverted.png') center center no-repeat; }
+#color-landing-page .navigation-brand .brand-logo .logo { display:block; height: 30px; background:image-url('img/adelaide-city-white.png') center center no-repeat; }
+#color-landing-page .fixmenu-stick .navigation-brand .brand-logo .logo { background:image-url('adelaide-city-white.png') center center no-repeat; }
 #color-landing-page .long-block .btn-secondary { margin-top: 35px; }
 #color-landing-page .static-header { background-image:none; background-color:#ef4135; }
 #color-landing-page .navigation-header .navigation-bar > li.featured > a { color:#fff; border-color:#fff; }
