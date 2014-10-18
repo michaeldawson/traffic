@@ -18,7 +18,7 @@ function pageSetup() {
     };
 
     var resizePageContent = function() {
-    var windowH         = $(window).height();
+    var windowH         = app.el['window'].height();
         $('#hero').css('min-height', windowH + 'px');
     }();
   

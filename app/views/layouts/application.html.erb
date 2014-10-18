@@ -10,6 +10,9 @@
 </head>
 <body data-action="<%= action_name %>" data-controller="<%= nice_controller_name %>" >
 
+  <%= render 'layouts/preloader' %>    
+  <%= render 'layouts/header' %>
+  
   <%= yield %>
 
   <%= render 'layouts/facebook' %>

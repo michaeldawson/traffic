@@ -1,16 +1,20 @@
 var Maps = function() {
+  var map;
+
   return {
     init: function() {
       // Set default height to all Google Maps Containers
-      $('.gmap').css('height', '600px');
+
+      $('.gmap').css('height', $(window).height() + 'px');
 
       // Initialize map with markers
-      var gmapIssues = new GMaps({
+      map = new GMaps({
         div: '#gmap-issues',
         lat: -34.9,
         lng: 138.6,
         zoom: 10,
-        scrollwheel: false
+        scrollwheel: false,
+        mapTypeId : google.maps.MapTypeId.ROADMAP
       })
 
       $.get("/issues", function(data) {
@@ -21,32 +25,20 @@ var Maps = function() {
           markers.push(marker);
         });
         console.log(markers);
-        gmapIssues.addMarkers(markers)
+        map.addMarkers(markers)
       });
+    },
 
-      // GMaps.geolocate({
-      //     success: function(position) {
-      //         gmapIssues.setCenter(position.coords.latitude, position.coords.longitude);
-      //         gmapIssues.addMarker({
-      //             lat: position.coords.latitude,
-      //             lng: position.coords.longitude,
-      //             animation: google.maps.Animation.DROP,
-      //             title: 'GeoLocation',
-      //             infoWindow: {
-      //                 content: '<div class="text-success"><i class="fa fa-map-marker"></i> <strong>Your location!</strong></div>'
-      //             }
-      //         });
-      //     },
-      //     error: function(error) {
-      //         alert('Geolocation failed: ' + error.message);
-      //     },
-      //     not_supported: function() {
-      //         alert("Your browser does not support geolocation");
-      //     },
-      //     always: function() {
-      //         // Message when geolocation succeed
-      //     }
-      // });
+    drawRoute: function(origin, destination) {
+      var res = map.drawRoute({
+        origin: origin,
+        destination: destination,
+        travelMode: 'driving',
+        strokeColor: '#131540',
+        strokeOpacity: 0.9,
+        strokeWeight: 8
+      });
+      return res
     }
   };
 }();

@@ -1,4 +1,4 @@
-<!-- <header>
+<header>
     <nav class="navigation navigation-header">
         <div class="container">
             <div class="navigation-brand">
@@ -14,19 +14,23 @@
             </div>
             <div class="navigation-navbar">
                 <ul class="navigation-bar navigation-bar-left">
-                    <li class="active"><a href="#hero">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#product">Prices</a></li>
-                    <li><a href="#feedback">Feedback</a></li>
-                    <li><a href="#team">Team</a></li>
-                    <li><a href="#guarantee">Contacts</a></li>
+                    <!-- <li class="active"><a href="#hero">Home</a></li> -->
+                    <li>
+                        <div
+                          class="fb-like"
+                          data-share="true"
+                          data-width="450"
+                          data-show-faces="true">
+                        </div>
+                    </li>
                 </ul>
-                <ul class="navigation-bar navigation-bar-right">
-                    <li><a href="register.html">Login</a></li>
-                    <li class="featured"><a href="register.html">Sign up</a></li>
-                </ul>  
+                <% unless user_signed_in? %>
+                    <ul class="navigation-bar navigation-bar-right">
+                        <li><a href="register.html">Login</a></li>
+                        <li class="featured"><a href="register.html">Sign up</a></li>
+                    </ul>  
+                <% end %>
             </div>
         </div>
     </nav>
-</header> -->
+</header>
