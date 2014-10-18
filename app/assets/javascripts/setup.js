@@ -2,6 +2,7 @@ APP = {
   common: {
     init: function() {
       // App.init();
+      pageSetup();
     }
   }
 };
