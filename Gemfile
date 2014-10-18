@@ -10,12 +10,19 @@ gem 'turbolinks'
 
 # Inputs
 gem 'feedjira'
+gem 'nokogiri'
 gem 'twitter'
 
 # Geocoding
 gem 'geocoder'
 
-gem 'nokogiri'
+# SMS 
+gem 'smsglobal'
+
+# Users
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 gem 'active_model_serializers'
 
