@@ -16,7 +16,7 @@ describe TweetService do
         expect {
           @tweet_service.process
         }.to_not change {
-          TwitterEntry.count
+          Issue.count
         }
       end
     end
@@ -32,7 +32,7 @@ describe TweetService do
           expect {
             @tweet_service.process
           }.to_not change {
-            TwitterEntry.count
+            Issue.count
           }
         end
       end
@@ -45,14 +45,14 @@ describe TweetService do
 
         context "that's been processed" do
           before :each do
-            TwitterEntry.create(uid: @uid)
+            Issue.create(uid: @uid)
           end
 
           it "doesn't create a new twitter entry" do
             expect {
               @tweet_service.process
             }.to_not change {
-              TwitterEntry.count
+              Issue.count
             }
           end
         end
@@ -62,13 +62,13 @@ describe TweetService do
             expect {
               @tweet_service.process
             }.to change {
-              TwitterEntry.count
+              Issue.count
             }.by(1)
           end
 
           it "assigns the suburb" do
             @tweet_service.process
-            TwitterEntry.last.suburb.should eq "Enfield"
+            Issue.last.suburb.should eq "Enfield"
           end
         end
       end

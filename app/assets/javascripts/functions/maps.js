@@ -5,18 +5,20 @@ var Maps = function() {
             $('.gmap').css('height', '350px');
 
             // Initialize map with markers
-            new GMaps({
-                div: '#gmap-markers',
+            var gmapIssues = new GMaps({
+                div: '#gmap-issues',
                 lat: 0,
                 lng: 0,
                 zoom: 3,
                 scrollwheel: false
-            }).addMarkers([
-                {lat: 20, lng: -31, title: 'Marker #1', animation: google.maps.Animation.DROP, infoWindow: {content: '<strong>Marker #1: HTML Content</strong>'}},
-                {lat: -10, lng: 0, title: 'Marker #2', animation: google.maps.Animation.DROP, infoWindow: {content: '<strong>Marker #2: HTML Content</strong>'}},
-                {lat: -20, lng: 85, title: 'Marker #3', animation: google.maps.Animation.DROP, infoWindow: {content: '<strong>Marker #3: HTML Content</strong>'}},
-                {lat: -20, lng: -110, title: 'Marker #4', animation: google.maps.Animation.DROP, infoWindow: {content: '<strong>Marker #4: HTML Content</strong>'}}
-            ]);
+            })
+
+            // .addMarkers([
+            //     {lat: 20, lng: -31, title: 'Marker #1', animation: google.maps.Animation.DROP, infoWindow: {content: '<strong>Marker #1: HTML Content</strong>'}},
+            //     {lat: -10, lng: 0, title: 'Marker #2', animation: google.maps.Animation.DROP, infoWindow: {content: '<strong>Marker #2: HTML Content</strong>'}},
+            //     {lat: -20, lng: 85, title: 'Marker #3', animation: google.maps.Animation.DROP, infoWindow: {content: '<strong>Marker #3: HTML Content</strong>'}},
+            //     {lat: -20, lng: -110, title: 'Marker #4', animation: google.maps.Animation.DROP, infoWindow: {content: '<strong>Marker #4: HTML Content</strong>'}}
+            // ]);
 
             GMaps.geolocate({
                 success: function(position) {

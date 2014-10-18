@@ -16,7 +16,10 @@ gem 'twitter'
 gem 'geocoder'
 
 group :test do
-  gem 'rspec-rails'  
+  gem 'rspec-rails'
 end
 
-gem 'byebug', group: [:development, :test]
+group :development, :test do
+  gem 'byebug'
+  gem "factory_girl_rails", ">= 4.2.0"
+end
