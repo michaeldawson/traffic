@@ -1,4 +1,11 @@
+<%= link_to image_tag("facebook-sign-in.png"),  user_omniauth_authorize_path(:facebook), class: 'facebook_login' %><br/><br/>
+<div
+  class="fb-like"
+  data-share="true"
+  data-width="450"
+  data-show-faces="true">
+</div>
+
 <div id="gmap-issues" class="gmap"></div>
 
-<%=
-'\n\t\t\t\t\t\n\t      \t\t\n<div class=\"row\">\n\t\t\t\t\t\t<span class=\"label\">Location: </span><span class=\"value\"><p>Various streets surrounding the Adelaide Oval. <a href=\"http://stage.accmaps.bl.ms/common/dm/assets/Adelaide_Oval_2014_Event_Parking_Restriction_Timetable_-_2_October_2014.pdf\">Click here</a> for more information.</p>\n</span>\n<div style=\"clear: both;\"></div>\n</div>\n<div style=\"clear: both;\"></div>\n<!-- .row -->\n\t\t\t\n<div class=\"row\">\n\t\t\t\t\t\t<span class=\"label\">When: </span><span class=\"value\"><p>Friday 17 October 2014 for Adelaide United A League match</p>\n<p>Saturday 25 October 2014 for the Rolling Stones concert</p>\n</span>\n<div style=\"clear: both;\"></div>\n</div>\n<div style=\"clear: both;\"></div>\n<!-- .row -->\n\t\t\t\n\t\t\t\t<div class=\"row last-updated\"><span class=\"value\">Last updated 13 October 2014 11:40 am</span></div>\n\t'.html_safe %>
+
