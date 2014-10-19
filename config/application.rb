@@ -22,5 +22,7 @@ module Traffic
 
     config.assets.precompile += %w( application/all.js )
     config.assets.precompile += %w( application/all.css )
+
+    config.assets.version = '1.1'
   end
 end
