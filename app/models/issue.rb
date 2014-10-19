@@ -16,8 +16,10 @@ class Issue < ActiveRecord::Base
   end
 
   def notify_users
-    User.all.each do |user|
-      Notification.create(issue: self, user: user)
+    if source.blank?
+      User.all.each do |user|
+        Notification.create(issue: self, user: user)
+      end
     end
   end
 end

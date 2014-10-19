@@ -21,6 +21,8 @@ class TweetService
     description = (text.split("-").last.strip).gsub(handle, "").gsub(hashtag, "")
     streets = text.scan(road).map{|s| s.join(" ")}.join(", ")
     
+    puts "Added twitter-sourced issue: #{title, issue_date}"
+
     issue = Issue.create(
       uid: id, 
       source: "twitter",
