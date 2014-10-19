@@ -13,7 +13,7 @@ class CouncilService
 
     road = /(\S+)\s(Rd|rd|Street|street|St|st|Lane|lane|Drive|drive|Dr|dr|Avenue|avenue|Av|av|Ave|Terrace|terrace|Tce|tce)/
 
-    return if Issue.where(uid: id).first
+    return if Issue.where(uid: "#{id}").first
 
     html_content = Nokogiri::HTML(content)
     html_content.xpath('//*[contains(@class,"label")]').each do |t|
@@ -24,8 +24,6 @@ class CouncilService
     # We try to extract a street name or something meaningful from the location, then use the full location as the description
     streets = @parsed_location.scan(road).map{|s| s.join(" ")}
     street = streets.first
-
-    byebug
 
     if @parsed_location && street
       issue = Issue.create(

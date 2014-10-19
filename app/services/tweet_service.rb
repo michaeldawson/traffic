@@ -11,11 +11,11 @@ class TweetService
     rt = /RT/
     road = /(\S+)\s(Rd|rd|Street|street|St|st|Lane|lane|Drive|drive|Dr|dr|Avenue|avenue|Av|av|Ave|Tce|tce)/
     handle = /@(\S+)/
-    hashtag = /#(\S+)/
+    hashtag = /#(\S+)/ 
 
     return if !(/-/.match text)
     return if rt.match text
-    return if Issue.where(uid: id).first
+    return if Issue.where(uid: "#{id}").first
 
     suburb = text.split("-").first.strip
     description = (text.split("-").last.strip).gsub(handle, "").gsub(hashtag, "")

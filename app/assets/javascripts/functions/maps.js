@@ -12,7 +12,7 @@ var Maps = function() {
         div: '#gmap-issues',
         lat: -34.9,
         lng: 138.6,
-        zoom: 10,
+        zoom: 12,
         scrollwheel: false,
         mapTypeId : google.maps.MapTypeId.ROADMAP
       })
@@ -69,7 +69,7 @@ var Maps = function() {
             $( ".result" ).html( data );
           });
 
-          var message = "<h4>That was a success!</h4> <p>We've saved your travel route and will alert you along the way</p>"
+          var message = "<h4>That was a success!</h4> <p>We've saved your travel route and will alert you if we hear of issues along the way!</p>"
           $.bootstrapGrowl(message, {
               type: 'success',
               delay: 7500,
