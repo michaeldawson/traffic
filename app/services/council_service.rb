@@ -27,7 +27,7 @@ class CouncilService
 
     if @parsed_location && street
 
-      puts "Added council-sourced issue: #{title, issue_date}"
+      puts "Added council-sourced issue: #{title} on #{issue_date}"
 
       issue = Issue.create(
         uid: id, 
