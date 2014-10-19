@@ -1,5 +1,6 @@
 class RoutesController < ApplicationController
   before_action :set_route, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /routes
   # GET /routes.json
@@ -10,6 +11,10 @@ class RoutesController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @routes }
     end
+  end
+
+  def clear
+    Issue.where(user: current_user).destroy_all
   end
 
   # GET /routes/1

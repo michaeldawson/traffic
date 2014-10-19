@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   resources :routes
 
   devise_for :users, :controllers => { :omniauth_callbacks => "devise/custom/omniauth_callbacks" }
-  get 'issues' => 'issues#index'
+  resources :issues do
+    get 'clear', on: :collection
+  end
 
   root to: 'static#index'
 
